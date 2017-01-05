@@ -56,7 +56,7 @@ export interface HTTPResponse {
   pluginName: 'HTTP',
   plugin: 'cordova-plugin-http',
   pluginRef: 'cordovaHTTP',
-  repo: 'https://github.com/wymsee/cordova-HTTP',
+  repo: 'https://github.com/brendonparker/cordova-HTTP',
   platforms: ['Android', 'iOS']
 })
 export class HTTP {
@@ -123,6 +123,17 @@ export class HTTP {
    */
   @Cordova()
   static post(url: string, body: any, headers: any): Promise<HTTPResponse> { return; }
+
+  /**
+   * Make a POST JSON request
+   * @param url {string} The url to send the request to
+   * @param json {Object} The json of the request
+   * @param headers {Object} The headers to set for this request
+   * @returns {Promise<HTTPResponse>} returns a promise that resolve on success, and reject on failure
+   */
+  @Cordova()
+  static postJson(url: string, json: any, headers: any): Promise<HTTPResponse> { return; }
+
 
   /**
    *
